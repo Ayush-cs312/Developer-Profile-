@@ -72,3 +72,46 @@ if (form) {
     form.reset();
   });
 }
+
+// ---------- Mobile navigation toggle ----------
+
+const rail = document.querySelector('.rail');
+const navToggle = document.getElementById('navToggle');
+
+function setMenu(open) {
+  rail.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+}
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    setMenu(!rail.classList.contains('open'));
+  });
+
+  // Close the menu after picking a section
+  links.forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+  // Reset if the window is resized back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) setMenu(false);
+  });
+}
+
+// ---------- Fade-in on scroll ----------
+
+const revealTargets = document.querySelectorAll('.block, .project, .skill-group');
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+  revealTargets.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealTargets.forEach(el => observer.observe(el));
+}

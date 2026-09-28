@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AK — Developer Profile</title>
+<title>AK — Developer Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -12,15 +12,20 @@
 
   <!-- Left rail: styled like an editor's open-file list -->
   <nav class="rail" aria-label="Section navigation">
-    <div class="rail-brand">AK<span class="cursor" aria-hidden="true">_</span></div>
-    <ul class="rail-list">
+    <div class="rail-top">
+      <div class="rail-brand">AK<span class="cursor" aria-hidden="true">_</span></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="railList">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="rail-list" id="railList">
       <li><a href="#about" class="rail-link" data-file="About">About</a></li>
       <li><a href="#skills" class="rail-link" data-file="Skills">Skills</a></li>
       <li><a href="#projects" class="rail-link" data-file="Projects">Projects</a></li>
       <li><a href="#contact" class="rail-link" data-file="Contact">Contact</a></li>
     </ul>
     <div class="rail-foot">
-      <a href="https://github.com/Ayush-cs312" target="_blank" rel="noopener">Ayush Kumar</a>
+      <a href="https://github.com/Ayush-cs312" target="_blank" rel="noopener">github.com/Ayush-cs312</a>
     </div>
   </nav>
 
@@ -117,7 +122,7 @@
             <h3>Student Result Management System</h3>
             <span class="project-meta">CRUD app</span>
           </div>
-          <p>A small system for entering student marks and generating result sheets automatically — add students, record subject-wise scores and calculate totals, percentages and grades without doing it by hand.</p>
+          <p>A small system for entering student marks and generating result sheets automatically — add students, record subject-wise scores, and calculate totals, percentages, and grades without doing it by hand.</p>
           <ul class="stack">
             <li>Python</li>
             <li>SQLite</li>
@@ -203,7 +208,7 @@
     </section>
 
     <footer class="footer">
-      <p>Built by AK ❤️</p>
+      <p>Built by AK — Week 01, Web Development.</p>
     </footer>
 
   </main>

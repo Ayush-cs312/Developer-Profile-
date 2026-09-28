@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK — Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Left rail: styled like an editor's open-file list -->
+  <nav class="rail" aria-label="Section navigation">
+    <div class="rail-top">
+      <div class="rail-brand">AK<span class="cursor" aria-hidden="true">_</span></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="railList">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="rail-list" id="railList">
+      <li><a href="#about" class="rail-link" data-file="About">About</a></li>
+      <li><a href="#skills" class="rail-link" data-file="Skills">Skills</a></li>
+      <li><a href="#projects" class="rail-link" data-file="Projects">Projects</a></li>
+      <li><a href="#contact" class="rail-link" data-file="Contact">Contact</a></li>
+    </ul>
+    <div class="rail-foot">
+      <a href="https://github.com/Ayush-cs312" target="_blank" rel="noopener">github.com/Ayush-cs312</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <p class="gutter">01</p>
+      <h1>Hi, I'm AK.</h1>
+      <p class="hero-line" id="typeLine"></p>
+      <p class="hero-sub">Computer Science Engineering student. I learn by building things that run — editors, models, and small tools that solve one problem well.</p>
+    </section>
+
+    <!-- About -->
+    <section class="block" id="about">
+      <header class="block-head">
+        <h2>About me</h2>
+      </header>
+      <div class="block-body prose">
+        <p>I'm a Computer Science Engineering student, currently working through coursework in databases, networking, and software development while building small projects on the side to see how the theory actually holds up in practice.</p>
+        <p>I like problems with a clear, visible outcome — something I can run, click through, and hand to someone else to try. That's why most of what I build starts small: a tool that does one thing well, rather than a half-built version of something large.</p>
+        <p>Outside coursework, I'm sharpening my web development and programming fundamentals, with an eye on campus placements and technical competitions coming up this year.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="block" id="skills">
+      <header class="block-head">
+        <h2>Skills</h2>
+      </header>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="chip-list">
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Python</li>
+            <li>C++</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul class="chip-list">
+            <li>React</li>
+            <li>Next.js</li>
+            <li>HTML &amp; CSS</li>
+            <li>Tailwind</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend &amp; Data</h3>
+          <ul class="chip-list">
+            <li>Node.js</li>
+            <li>REST APIs</li>
+            <li>XGBoost</li>
+            <li>LangChain</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Workflow</h3>
+          <ul class="chip-list">
+            <li>Git &amp; GitHub</li>
+            <li>Docker</li>
+            <li>Turborepo</li>
+            <li>pnpm</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="block" id="projects">
+      <header class="block-head">
+        <h2>Projects</h2>
+      </header>
+
+      <div class="project-list">
+
+        <article class="project">
+          <div class="project-name">
+            <h3>Simple Scientific Calculator</h3>
+            <span class="project-meta">Utility</span>
+          </div>
+          <p>A browser-based calculator that goes beyond basic arithmetic — trigonometric functions, logarithms, exponents, and memory keys, built with plain JavaScript and no external math library.</p>
+          <ul class="stack">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-name">
+            <h3>Student Result Management System</h3>
+            <span class="project-meta">CRUD app</span>
+          </div>
+          <p>A small system for entering student marks and generating result sheets automatically — add students, record subject-wise scores, and calculate totals, percentages, and grades without doing it by hand.</p>
+          <ul class="stack">
+            <li>Python</li>
+            <li>SQLite</li>
+            <li>CRUD</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-name">
+            <h3>Personal Expense Tracker</h3>
+            <span class="project-meta">Productivity</span>
+          </div>
+          <p>Logs daily expenses by category and shows where the money actually goes each month, with a simple chart to compare spending across categories at a glance.</p>
+          <ul class="stack">
+            <li>JavaScript</li>
+            <li>Chart.js</li>
+            <li>Local Storage</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-name">
+            <h3>Weather Forecast App</h3>
+            <span class="project-meta">API integration</span>
+          </div>
+          <p>Looks up current conditions and a short forecast for any city by name, pulling live data from a public weather API and handling the inevitable "city not found" case gracefully.</p>
+          <ul class="stack">
+            <li>JavaScript</li>
+            <li>REST API</li>
+            <li>Fetch</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-name">
+            <h3>To-Do List Application</h3>
+            <span class="project-meta">Task manager</span>
+          </div>
+          <p>A task manager with add, edit, complete, and delete actions, plus filtering by status — the kind of small app that's simple to describe but useful for practicing clean state management.</p>
+          <ul class="stack">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="block" id="contact">
+      <header class="block-head">
+        <h2>Get in touch</h2>
+      </header>
+
+      <div class="contact-wrap">
+        <div class="contact-note prose">
+          <p>Have a project, an internship lead, or just want to talk about something I built? The form goes straight to my inbox — or reach me directly below.</p>
+          <ul class="contact-links">
+            <li><span>email</span><a href="mailto:nnm24cs312@nmamit.in">nnm24cs312@nmamit.in</a></li>
+            <li><span>github</span><a href="https://github.com/Ayush-cs312" target="_blank" rel="noopener">github.com/Ayush-cs312</a></li>
+            <li><span>linkedin</span><a href="https://linkedin.com/in/ayushkumar-fsd" target="_blank" rel="noopener">linkedin.com/in/ayushkumar-fsd</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built by AK — Week 01, Web Development.</p>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
